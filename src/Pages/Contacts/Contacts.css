@@ -1,0 +1,47 @@
+@font-face {
+	font-family: RobotoCondensed;
+	src: url("/src/Fonts/RobotoCondensed-Regular.ttf")
+}
+
+.contacts {
+    background-color: #000419;
+    height: 100vh;
+}
+
+.email-phone{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+}
+
+.email {
+    font-size: 17px;
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.phone {
+    font-size: 17px;
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.img-background1{
+    position: absolute;
+    max-height: 100%;
+}
+
+.img-background2{
+    position: absolute;
+    right: 0px;
+    max-height: 100%;
+    z-index: 0;
+}

@@ -1,0 +1,71 @@
+@font-face {
+	font-family: BebasNeue;
+	src: url("/src/Fonts/BebasNeue-Regular.ttf")
+}
+
+.nav {
+    position: absolute;
+    right: 0px;
+    z-index: 100;
+    display: flex;
+}
+
+.noactive {
+    font-size: 17px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.stlink{
+    position: relative;
+    text-align: center;
+    margin-left: -80px;
+}
+
+.stlink #navlink{
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#img-nav{
+    padding-left: -20px;
+}
+
+
+.active-tur {
+    font-size: 17px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    background: linear-gradient(181.04deg, #FFFFFF 0.89%, #0DFFE6 133.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.active-blue {
+    font-size: 17px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    background: linear-gradient(181.04deg, #FFFFFF 0.89%, #0D17FF 133.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.active-orange {
+    font-size: 17px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    background: linear-gradient(181.04deg, #FFFFFF 0.89%, #FF7A00 133.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
