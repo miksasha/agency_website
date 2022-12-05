@@ -1,0 +1,134 @@
+@font-face {
+	font-family: RobotoCondensed;
+	src: url("/src/Fonts/RobotoCondensed-Regular.ttf")
+}
+
+.portfolio-page{
+    background-color: #000419;
+    position: relative;
+}
+
+.main-portfolio-block{
+    display: grid;
+    grid-template-columns: repeat(12, 65px);
+    grid-template-rows: 150px repeat(2, 1fr) 25px;
+    row-gap: 70px;
+    grid-column-gap: 30px;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 70px;
+}
+
+.filter-sort{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/13;
+    margin-top: 12%;
+    
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/13;
+}
+
+.filter-sort-left{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+select{
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 7px;
+    height: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    color: #fff;
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.checkbox{
+    display: flex;
+    gap: 15px;
+}
+
+option {
+    background-color: #000419;
+
+}
+
+label{
+    color: #fff;
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.best_projects{
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+}
+
+.search{
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 7px;
+    height: 30px;
+    width: 255px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    color: #fff;
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    background-image: url("../../images/search-icon.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/*навігація*/
+.page_nav{
+    display: flex;
+    gap: 10px;
+    grid-column: 1/13;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_nav p, a{
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.img-background2{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 0;
+}
+
+.img-background1{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+}

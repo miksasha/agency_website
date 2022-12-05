@@ -9,8 +9,8 @@ const Layout = () => {
   return (
     <>
        <nav className="nav">
-        <div className="stlink">
-        <NavLink to={'/main'} id="navlink" className={({ isActive }) =>(isActive ? "active-orange" : "noactive")}>Main</NavLink>
+        <div className="stlinkm">
+        <NavLink to={'/'} id="navlink" className={({ isActive }) =>(isActive ? "active-orange" : "noactive")}>Main</NavLink>
         <img src={line1} alt=""  id="img-nav"></img>
         </div>
 

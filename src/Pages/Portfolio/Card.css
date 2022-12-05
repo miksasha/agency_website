@@ -1,0 +1,37 @@
+@font-face {
+	font-family: RobotoCondensed;
+	src: url("/src/Fonts/RobotoCondensed-Regular.ttf")
+}
+
+@font-face {
+	font-family: BebasNeue;
+	src: url("/src/Fonts/BebasNeue-Regular.ttf")
+}
+
+span {
+    color: #fff;
+    font-family: RobotoCondensed;
+    font-size: 16px;
+}
+
+.project_name {
+    font-family: BebasNeue;
+    font-size: 20px;
+}
+
+.img-card{
+    width: 255px;
+    height: 255px;
+}
+
+.card{
+    width: 255px;
+}
+
+.description{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 255px;
+}
