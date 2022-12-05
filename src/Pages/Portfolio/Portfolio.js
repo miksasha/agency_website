@@ -5,7 +5,29 @@ import background2 from "../../images/portfolio-line2.png"
 import Card from "./Card"
 import image_project from "../../images/Project1.jpg"
 
+
+let data = [
+  {name: 'ASUON', days: '23', photo: image_project},
+  {name: 'Light Uber', days: '50', photo: image_project},
+  {name: 'Drove app', days: '135', photo: image_project},
+  {name: 'NFT market', days: '130', photo: image_project},
+  {name: 'Bank website', days: '53', photo: image_project},
+  {name: 'Meeting website', days: '135', photo: image_project},
+  {name: 'Game', days: '333', photo: image_project},
+  {name: 'NTF store', days: '105', photo: image_project},
+];
+
 export default class Portfolio extends Component {
+  
+  constructor() {
+		super();
+		this.state = {cards: data.map((key) => <Card image={key.photo} projectName={key.name} days={key.days} />)};
+	}
+
+  toggleText() {
+		this.setState({hello: !this.state.hello});
+	}
+
   render() {
     return (
       <div className='portfolio-page'>
@@ -37,21 +59,11 @@ export default class Portfolio extends Component {
         </div>
 
         <div className='cards'>
-          <Card image={image_project} projectName="Name" days="26" />
-          <Card image={image_project} projectName="Name" days="26" />
-          <Card image={image_project} projectName="Name" days="26" />
-          <Card image={image_project} projectName="Name" days="26" />
-        </div>
-
-        <div className='cards'>
-          <Card image={image_project} projectName="Name" days="26" />
-          <Card image={image_project} projectName="Name" days="26" />
-          <Card image={image_project} projectName="Name" days="26" />
-          <Card image={image_project} projectName="Name" days="26" />
+        {this.state.cards}
         </div>
 
         <div className='page_nav'>
-            <a href='#'>1</a>
+            <a href='#' className='selected'>1</a>
             <a href='#'>2</a>
             <p>...</p>
             <a href='#'>5</a>

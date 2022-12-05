@@ -11,7 +11,7 @@
 .main-portfolio-block{
     display: grid;
     grid-template-columns: repeat(12, 65px);
-    grid-template-rows: 150px repeat(2, 1fr) 25px;
+    grid-template-rows: 150px  1fr 25px;
     row-gap: 70px;
     grid-column-gap: 30px;
     position: relative;
@@ -30,9 +30,12 @@
 }
 
 .cards{
-    display: flex;
-    justify-content: space-between;
     grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 70px;
+    grid-column-gap: 30px;
 }
 
 .filter-sort-left{
@@ -116,6 +119,11 @@ label{
     font-size: 16px;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.selected{
+    color: #FF7A00;
+    
 }
 
 
