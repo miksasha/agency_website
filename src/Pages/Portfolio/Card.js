@@ -4,7 +4,7 @@ import './Card.css'
 export default function Card( props ) {
   return (
     <div className='card'>
-      <a href="https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"  target="_blank" >
+      <a href={props.link}  target="_blank" >
         <img src={props.image} alt="project image" className="img-card"></img>
         </a>
 
