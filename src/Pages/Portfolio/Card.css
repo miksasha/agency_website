@@ -35,3 +35,15 @@ span {
     align-items: center;
     max-width: 255px;
 }
+
+.description-min {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 255px;
+}
+
+.description-min span{
+    font-size: 13px;
+}

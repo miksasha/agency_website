@@ -1,0 +1,36 @@
+export const projectsInfo = [
+    {name: 'ASUON', days: 23, date: "2017-10-17", photo: "../../images/Project1.jpg", type: 'React', best: true},
+    {name: 'Light Uber', days: 50, date: "2017-11-14", photo: "../../images/Project1.jpg", type: 'React', best: true},
+    {name: 'Drove app', days: 135,  date: "2022-12-10", photo: "../../images/Project1.jpg", type: 'React', best: false},
+    {name: 'NFT market', days: 130,  date: "2003-12-15", photo: "../../images/Project1.jpg", type: 'Design', best: true},
+    {name: 'Bank website', days: 53,  date: "2019-01-28", photo: "../../images/Project1.jpg", type: 'Angular', best: false},
+    {name: 'Meeting website', days: 135, date: "2014-02-17", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+    {name: 'Game', days: 333, date: "2000-12-17", photo: "../../images/Project1.jpg", type: 'Angular', best: false},
+    {name: 'NFT store', days: 105, date: "1995-12-17", photo: "../../images/Project1.jpg", type: 'React', best: false},
+    {name: 'GameDave', days: 254, date: "2020-04-14", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+    {name: 'Blockchain web', days: 145, date: "2019-08-08", photo: "../../images/Project1.jpg", type: 'React', best: false},
+    
+    {name: 'Flower shop', days: 21, date: "2021-11-17", photo: "../../images/Project1.jpg", type: 'React', best: true},
+    {name: 'Medical web', days: 53, date: "2018-06-14", photo: "../../images/Project1.jpg", type: 'React', best: false},
+    {name: 'Shop app', days: 35,  date: "2022-01-10", photo: "../../images/Project1.jpg", type: 'React', best: false},
+    {name: 'Info Blockchain ', days: 130,  date: "2022-02-15", photo: "../../images/Project1.jpg", type: 'React', best: false},
+    {name: 'Restauran web', days: 53,  date: "2022-01-28", photo: "../../images/Project1.jpg", type: 'Angular', best: false},
+    {name: 'Cafe website', days: 135, date: "2021-02-17", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+    {name: 'Forog', days: 333, date: "2021-12-21", photo: "../../images/Project1.jpg", type: 'Angular', best: false},
+    {name: 'NFF app', days: 105, date: "2022-02-12", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+    {name: 'Date web', days: 254, date: "2021-04-14", photo: "../../images/Project1.jpg", type: 'React', best: true},
+    {name: 'Blockchain app', days: 145, date: "2020-08-08", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+
+    {name: 'VARUS shop', days: 61, date: "2021-11-17", photo: "../../images/Project1.jpg", type: 'React', best: true},
+    {name: 'Med web', days: 43, date: "2018-06-14", photo: "../../images/Project1.jpg", type: 'React', best: false},
+    {name: 'Photo galary', days: 65,  date: "2022-01-10", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+    {name: 'Info Gaming web ', days: 90,  date: "2022-02-15", photo: "../../images/Project1.jpg", type: 'React', best: false},
+    {name: 'Cinema web', days: 63,  date: "2022-01-28", photo: "../../images/Project1.jpg", type: 'Angular', best: false},
+    {name: 'Cafe web', days: 105, date: "2021-02-17", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+    {name: 'Music app', days: 73, date: "2021-12-21", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+    {name: 'Corporate web', days: 45, date: "2022-02-12", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+    {name: 'SDF web', days: 254, date: "2021-04-14", photo: "../../images/Project1.jpg", type: 'React', best: true},
+    {name: 'Corporate app', days: 135, date: "2020-08-08", photo: "../../images/Project1.jpg", type: 'Design', best: false},
+
+
+];

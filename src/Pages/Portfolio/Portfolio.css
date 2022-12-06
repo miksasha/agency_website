@@ -6,6 +6,7 @@
 .portfolio-page{
     background-color: #000419;
     position: relative;
+    min-height: 100vh;
 }
 
 .main-portfolio-block{
@@ -123,7 +124,7 @@ label{
 
 .selected{
     color: #FF7A00;
-    
+    text-decoration: underline;
 }
 
 
