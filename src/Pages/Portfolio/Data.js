@@ -1,14 +1,16 @@
 import image_angular from "../../images/Angular.jpg"
 import image_react from "../../images/React.jpg"
 import image_design from "../../images/Design.jpg"
+import image_react_big from "../../images/React-big.jpg"
+import image_design_big from "../../images/Design-big.jpg"
 
 export const projectsInfo = [
-    {name: 'ASUON', days: 23, date: "2017-10-17", photo: image_react, type: 'React', best: true, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
+    {name: 'ASUON', days: 23, date: "2017-10-17", photo: image_react_big, type: 'React', best: true, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'Light Uber', days: 50, date: "2017-11-14", photo: image_react, type: 'React', best: true, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'Drove app', days: 135,  date: "2022-12-10", photo: image_react, type: 'React', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'NFT market', days: 130,  date: "2003-12-15", photo: image_design, type: 'Design', best: true, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'Bank website', days: 53,  date: "2019-01-28", photo: image_angular, type: 'Angular', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
-    {name: 'Meeting website', days: 135, date: "2014-02-17", photo: image_design, type: 'Design', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
+    {name: 'Meeting website', days: 135, date: "2014-02-17", photo: image_design_big, type: 'Design', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'Game', days: 333, date: "2000-12-17", photo: image_angular, type: 'Angular', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'NFT store', days: 105, date: "1995-12-17", photo: image_react, type: 'React', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'GameDave', days: 254, date: "2020-04-14", photo: image_design, type: 'Design', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},

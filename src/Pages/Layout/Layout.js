@@ -11,32 +11,32 @@ const Layout = () => {
        <nav className="nav">
         <div className="stlinkm">
         <NavLink to={'/'} id="navlink" className={({ isActive }) =>(isActive ? "active-orange" : "noactive")}>Main</NavLink>
-        <img src={line1} alt=""  id="img-nav"></img>
+        <img src={line1} alt=""  id="img-nav-m"></img>
         </div>
 
         <div className="stlink">
         <NavLink to={'/services'} id="navlink" className={({ isActive }) =>(isActive ? "active-tur" : "noactive")}>Services</NavLink>
-        <img src={line6} alt=""  id="img-nav"></img>
+        <img src={line6} alt=""  id="img-nav-s"></img>
         </div>
 
         <div className="stlink">
         <NavLink to={'/our-team'} id="navlink" className={({ isActive }) =>(isActive ? "active-blue" : "noactive")}>Our team</NavLink>
-        <img src={line5} alt=""  id="img-nav"></img>
+        <img src={line5} alt=""  id="img-nav-o"></img>
         </div>
 
         <div className="stlink">
         <NavLink to={'/portfolio'}  id="navlink" className={({ isActive }) =>(isActive ? "active-orange" : "noactive")}>Portfolio</NavLink>
-        <img src={line4} alt=""  id="img-nav"></img>
+        <img src={line4} alt=""  id="img-nav-p"></img>
         </div>
 
         <div className="stlink">
         <NavLink to={'/feedback'} id="navlink" className={({ isActive }) =>(isActive ? "active-blue" : "noactive")}>Feedback</NavLink>
-        <img src={line5} alt=""  id="img-nav"></img>
+        <img src={line5} alt=""  id="img-nav-f"></img>
         </div>
 
         <div className="stlink">
         <NavLink to={'/contacts'} id="navlink" className={({ isActive }) =>(isActive ? "active-tur" : "noactive")}>Contacts</NavLink>
-        <img src={line6} alt=""  id="img-nav"></img>
+        <img src={line6} alt=""  id="img-nav-c"></img>
         </div>
       </nav>
 

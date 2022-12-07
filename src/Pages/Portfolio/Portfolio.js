@@ -69,6 +69,7 @@ export default class Portfolio extends Component {
 
   bestProjectHendler = (event) => {
     if(event.target.checked){
+      currentPage=1;
       this.setState( {cards: this.state.arr.filter(element => element.best==event.target.checked).slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />)});
       this. pagination(this.state.arr.filter(element => element.best==event.target.checked), 1);
     }else{
@@ -98,7 +99,11 @@ export default class Portfolio extends Component {
         console.log(html);
       }
     }
+    if(html.length!=1){
     this.setState( {pagination: <div className='page_nav'>{html}</div>});
+    }else{
+      this.setState( {pagination: <div className='page_nav'></div>});
+    }
   }
 
   SearchHendler = (event) => {

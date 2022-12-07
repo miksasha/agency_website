@@ -18,7 +18,7 @@ export default class Contacts extends Component {
         <div className='for-row'>
         <div className='email-phone'>
         <a href="mailto:miksasha2003@gmail.com" className='email'>miksasha2003@gmail.com</a>
-        <a href="tel:+380671253611" className="phone">+38 (067) 125-36-11</a>
+        <a href="tel:+380671253611" className="phone">+38(067)1253611</a>
         </div>
 
         <div className='s-networks'>

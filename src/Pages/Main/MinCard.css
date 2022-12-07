@@ -1,0 +1,116 @@
+@font-face {
+	font-family: RobotoCondensed;
+	src: url("/src/Fonts/RobotoCondensed-Regular.ttf")
+}
+
+@font-face {
+	font-family: BebasNeue;
+	src: url("/src/Fonts/BebasNeue-Regular.ttf")
+}
+
+.all_card{
+    position: relative;
+    z-index: 5;
+}
+
+.all_card:hover .cards_blur{
+    background: #0DFFE6;
+    filter: blur(25px);
+    width: 255px;
+    height: auto;
+    min-height: 225px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.8s;
+}
+
+.all_card:hover{
+    position: relative;
+    z-index: 6;
+}
+
+.cards_about_us{
+    background: #0A0C19;
+    border-radius: 43px;
+    width: 255px;
+    height: auto;
+    min-height: 225px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.cards_blur{
+    background: #0DFFE6;
+    filter: blur(25px);
+    width: 255px;
+    height: auto;
+    min-height: 225px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+.card_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#text{
+    font-family: 'RobotoCondensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(10px + 4 * (100vw / 1000));;
+    text-align: center;
+    width: 60%;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.image_number{
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .all_card:hover .cards_blur{
+        width: 200px;
+    }
+    .cards_about_us{
+        width: 200px;
+    }
+    
+    .cards_blur{
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .all_card:hover .cards_blur{
+        width: 150px;
+    }
+    .cards_about_us{
+        width: 150px;
+    }
+    
+    .cards_blur{
+        width: 150px;
+    }
+    #text{
+        font-size: 12px;
+    }
+}

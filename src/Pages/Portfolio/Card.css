@@ -24,6 +24,7 @@ span {
     height: 255px;
 }
 
+
 .card{
     width: 255px;
 }
@@ -47,3 +48,26 @@ span {
 .description-min span{
     font-size: 13px;
 }
+
+/*adaptation*/
+@media only screen and (max-width: 1400px) {
+    .img-card{
+        width: 200px;
+        height: 200px;
+    }
+    
+    
+    .card{
+        width: 200px;
+    }
+    
+    .description{
+        max-width: 200px;
+    }
+    
+    .description-min {
+        max-width: 200px;
+    }
+    
+    
+} 
