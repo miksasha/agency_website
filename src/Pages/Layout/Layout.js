@@ -10,7 +10,7 @@ const Layout = () => {
     <>
        <nav className="nav">
         <NavLink to={'/'} id="nav-link-block" className={({ isActive }) =>(isActive ? "active-orange" : "noactive")}>
-          <p>Main</p>
+          <p id="main">Main</p>
           <img src={line1} alt=""  id="img-nav-m"></img>
         </NavLink>
 

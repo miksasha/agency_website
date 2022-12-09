@@ -4,15 +4,12 @@
 }
 
 .nav {
-    position: absolute;
+    position: fixed;
     right: 0px;
+    top: 0px;
     z-index: 100;
     display: flex;
 }
-
-/*new part*/
-
-/*new part*/
 
 .noactive {
     display: flex;
@@ -108,3 +105,41 @@
 .active-orange img{
     margin-top: -70px;
 }
+
+/*adaptation*/
+
+@media only screen and (max-width: 1000px) {
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        margin-right: -20px;
+    }
+
+    .noactive img{
+        margin-top: -70px;
+        margin-bottom: -70px;
+        opacity: 0;
+    }
+
+    #img-nav-m{
+        margin-top: -85px;
+        margin-bottom: -90px;
+    }
+    
+    .active-tur img{
+        margin-top: -70px;
+        margin-bottom: -70px;
+    }
+    
+    .active-blue img{
+        margin-top: -70px;
+        margin-bottom: -70px;
+    }
+    
+    .active-orange img{
+        margin-top: -70px;
+        margin-bottom: -70px;
+    }
+    
+} 
