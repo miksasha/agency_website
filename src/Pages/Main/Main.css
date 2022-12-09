@@ -89,7 +89,7 @@ h2{
 .bobl_2{
     position: absolute;
     right: 50px;
-    top: 50%;
+    top: 30%;
     z-index: 3;
     width: 20%;
     height: auto;
@@ -107,7 +107,7 @@ h2{
 .bobl_4{
     position: absolute;
     left: 20%;
-    top: 70vh;
+    top: 40%;
     z-index: 3;
     width: 10%;
     height: auto;
@@ -189,18 +189,10 @@ h2{
         grid-template-columns: repeat(4, 200px);
         grid-column-gap: 30px;
     }
-	.bobl_2{
-        position: absolute;
-        right: 10px;
-        top: 30vh;
-        z-index: 3;
-        width: 20%;
-        height: auto;
-    }
     .bobl_4{
         position: absolute;
         left: 15%;
-        top: 60vh;
+        top: 600px;
         z-index: 3;
         width: 10%;
         height: auto;
@@ -217,10 +209,10 @@ h2{
     }
     .bobl_2{
         right: 5px;
-        top: 25vh;
+        top: 220px;
     }
     .bobl_4{
-        top: 50vh;
+        top: 500px;
     }
     
 } 
@@ -236,21 +228,21 @@ h2{
     }
     .bobl_2{
         right: 5px;
-        top: 25vh;
+        top: 160px;
     }
     .bobl_4{
-        top: 40vh;
+        top: 400px;
     }
     
 } 
 @media only screen and (max-width: 600px) {
 
-    .bobl_2{
+    .bobld_2{
         right: 5px;
-        top: 20vh;
+        top: 120px;
     }
     .bobl_4{
-        top: 30vh;
+        top: 300px;
     }
     
 } 
@@ -263,12 +255,12 @@ h2{
         row-gap: 30px;
         grid-column-gap: 30px;
     }
-    .bobl_2{
+    .bobld_2{
         right: 5px;
-        top: 15vh;
+        top: 100px;
     }
     .bobl_4{
-        top: 25vh;
+        top: 250px;
     }
     
 } 
