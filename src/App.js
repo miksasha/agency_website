@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter className="Navigation">
         <Routes>
         <Route path="/" element={<Layout />}>
-          <Route exact path='/' element={<Main />}/>
+          <Route index element={<Main />}/>
           <Route path='services' element={<Services />}/>
           <Route path='our-team' element={<OurTeam />}/>
           <Route path='portfolio' element={<Portfolio />}/>
@@ -25,5 +25,6 @@ function App() {
     </BrowserRouter>
   );
 }
+//<Route path='*' element={<NotFoundPage />}/>
 
 export default App;

@@ -9,7 +9,45 @@ const Layout = () => {
   return (
     <>
        <nav className="nav">
-        <div className="stlinkm">
+        <NavLink to={'/'} id="nav-link-block" className={({ isActive }) =>(isActive ? "active-orange" : "noactive")}>
+          <p>Main</p>
+          <img src={line1} alt=""  id="img-nav-m"></img>
+        </NavLink>
+
+        <NavLink to={'/services'} id="nav-link-block" className={({ isActive }) =>(isActive ? "active-tur" : "noactive")}>
+          <p>Services</p>
+          <img src={line6} alt=""  id="img-nav-s"></img>
+        </NavLink>
+        
+        <NavLink to={'/our-team'} id="nav-link-block" className={({ isActive }) =>(isActive ? "active-blue" : "noactive")}>
+          <p>Our team</p>
+          <img src={line5} alt=""  id="img-nav-o"></img>
+        </NavLink>
+        
+        <NavLink to={'/portfolio'}  id="nav-link-block" className={({ isActive }) =>(isActive ? "active-orange" : "noactive")}>
+          <p>Portfolio</p>
+          <img src={line4} alt=""  id="img-nav-p"></img>
+        </NavLink>
+
+        <NavLink to={'/feedback'} id="nav-link-block" className={({ isActive }) =>(isActive ? "active-blue" : "noactive")}>
+          <p>Feedback</p>
+          <img src={line5} alt=""  id="img-nav-f"></img>
+        </NavLink>
+
+        <NavLink to={'/contacts'} id="nav-link-block" className={({ isActive }) =>(isActive ? "active-tur" : "noactive")}>
+          <p>Contacts</p>
+          <img src={line6} alt=""  id="img-nav-c"></img>
+        </NavLink>
+
+      </nav>
+
+      <Outlet />
+    </>
+  )
+};
+
+/*
+<div className="stlinkm">
         <NavLink to={'/'} id="navlink" className={({ isActive }) =>(isActive ? "active-orange" : "noactive")}>Main</NavLink>
         <img src={line1} alt=""  id="img-nav-m"></img>
         </div>
@@ -38,11 +76,6 @@ const Layout = () => {
         <NavLink to={'/contacts'} id="navlink" className={({ isActive }) =>(isActive ? "active-tur" : "noactive")}>Contacts</NavLink>
         <img src={line6} alt=""  id="img-nav-c"></img>
         </div>
-      </nav>
-
-      <Outlet />
-    </>
-  )
-};
+*/ 
 
 export default Layout;
