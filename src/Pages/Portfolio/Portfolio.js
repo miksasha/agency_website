@@ -27,10 +27,6 @@ export default class Portfolio extends Component {
     };
 	}
 
-  toggleText() {
-		this.setState({hello: !this.state.hello});
-	}
-
   pageChange = (event) => {
     currentPage = event.target.innerText;
     this.setState({cards: this.state.arr.slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />), });
