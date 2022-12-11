@@ -9,48 +9,46 @@ function byField(field) {
   return (a, b) => a[field] > b[field] ? 1 : -1;
 }
 
-let currentPage=1;
-
 export default class Portfolio extends Component {
   
   constructor() {
 		super();
 		this.state = { 
       arr: projectsInfo,
-      cards: projectsInfo.slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />),
+      cards: projectsInfo.slice(1*8-8,1*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />),
       pagination: <div className='page_nav'>
       <a href='#' className='selected' onClick={event => this.pageChange(event)}>1</a>
       <a href='#' onClick={event => this.pageChange(event)}>2</a>
       <a href='#' onClick={event => this.pageChange(event)}>3</a>
       <a href='#' onClick={event => this.pageChange(event)}>4</a>
       </div>,
+      currentPage: 1,
     };
 	}
 
   pageChange = (event) => {
-    currentPage = event.target.innerText;
-    this.setState({cards: this.state.arr.slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />), });
+    this.setState(state => ({ cards: [...state.arr].slice(event.target.innerText*8-8,event.target.innerText*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />),
+    currentPage: event.target.innerText, }));
     this.pagination(this.state.arr, event.target.innerText);
   }
 
   sortHendler = (event) => {
-    console.log( event.target.value);
     if(event.target.value == 'alphabetsort'){
-      this.setState( {cards: this.state.arr.sort(byField('name')).slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days}  projectType={key.type} date={key.date} link={key.link}/>)});
+      this.setState(state => ({ cards: [...state.arr].sort(byField('name')).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days}  projectType={card.type} date={card.date} link={card.link}/>)}));
     }
     if(event.target.value == 'durationsort'){
-      this.setState( {cards: this.state.arr.sort(byField('days')).slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />)});
+      this.setState(state => ({ cards: [...state.arr].sort(byField('days')).slice( this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
     }
 
     if(event.target.value == 'timesort'){
-      this.setState( {cards: this.state.arr.sort(byField('date')).slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />)});
+      this.setState(state => ({ cards: [...state.arr].sort(byField('date')).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
     }
   }
 
   filterHendler = (event) => {
     
     if(event.target.value == 'all'){
-      this.setState( {arr: projectsInfo, cards: projectsInfo.slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />)});
+      this.setState( {arr: projectsInfo, cards: projectsInfo.slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)});
       this.setState( {pagination: <div className='page_nav'>
       <a href='#' className='selected' onClick={event => this.pageChange(event)}>1</a>
       <a href='#' onClick={event => this.pageChange(event)}>2</a>
@@ -58,44 +56,40 @@ export default class Portfolio extends Component {
       <a href='#' onClick={event => this.pageChange(event)}>4</a>
       </div>});
     }else{
-      this.setState( {arr: projectsInfo.filter(element => element.type==event.target.value), cards: projectsInfo.filter(element => element.type==event.target.value).slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />)});
+      this.setState( {arr: projectsInfo.filter(element => element.type==event.target.value), cards: projectsInfo.filter(element => element.type==event.target.value).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)});
       this.pagination(projectsInfo.filter(element => element.type==event.target.value), 1);
     }
   }
 
   bestProjectHendler = (event) => {
     if(event.target.checked){
-      currentPage=1;
-      this.setState( {cards: this.state.arr.filter(element => element.best==event.target.checked).slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />)});
+      this.setState(state => ({ ...state, currentPage: 1 }));
+      this.setState(state => ({ cards: [...state.arr].filter(element => element.best==event.target.checked).slice(0, 8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
       this. pagination(this.state.arr.filter(element => element.best==event.target.checked), 1);
     }else{
-      this.setState( {cards: this.state.arr.slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date} link={key.link} />)});
+      this.setState(state => ({ cards: [...state.arr].slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
       this.pagination(this.state.arr, 1);
     }
 
   }
 
   pagination = (arr, currentPageNum)=>{
-    currentPage=currentPageNum;
+    this.setState(state => ({ ...state, currentPage: currentPageNum }));
     let html = [];
-    console.log(html);
     for(let i=0; i<arr.length/8; i++){
       if(html == undefined){
-        console.log(html);
-      if(currentPage-1==i)
+      if(currentPageNum-1==i)
       html.push(<a href='#' className='selected' onClick={event => this.pageChange(event)}>{i+1}</a>);
       else
       html.push(<a href='#' onClick={event => this.pageChange(event)}>{i+1}</a>);
-      console.log("1 " +html);
       }else{
-        if(currentPage-1==i)
+        if(currentPageNum-1==i)
         html.push(<a href='#' className='selected' onClick={event => this.pageChange(event)}>{i+1}</a>);
         else
         html.push(<a href='#' onClick={event => this.pageChange(event)}>{i+1}</a>);
-        console.log(html);
       }
     }
-    if(html.length!=1){
+    if(html.length !== 1){
     this.setState( {pagination: <div className='page_nav'>{html}</div>});
     }else{
       this.setState( {pagination: <div className='page_nav'></div>});
@@ -106,7 +100,7 @@ export default class Portfolio extends Component {
     document.getElementsByClassName("all-select")[0].removeAttribute("selected");
     document.getElementsByClassName("all-select")[0].setAttribute("selected", true);
     this.pagination(projectsInfo.filter(element => element.name.toLowerCase().includes(event.target.value.toLowerCase())), 1);
-   this.setState( {cards: projectsInfo.filter(element => element.name.toLowerCase().includes(event.target.value.toLowerCase())).slice(currentPage*8-8,currentPage*8).map((key) => <Card image={key.photo} projectName={key.name} days={key.days} projectType={key.type} date={key.date}  link={key.link}/>)});
+   this.setState( {cards: projectsInfo.filter(element => element.name.toLowerCase().includes(event.target.value.toLowerCase())).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date}  link={card.link}/>)});
    }
 
   render() {

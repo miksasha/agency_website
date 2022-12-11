@@ -25,9 +25,9 @@ export default class Main extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      imgJustScroll: <img src={main_line_3} alt="" className="main_line_3"></img>,
-      imgBobl2: <img src={bobl_2} alt="" className="bobl_2"></img>,
-      imgBobl3: <img src={bobl_3} alt="" className="bobl_3"></img>,
+      imgJustScroll: main_line_3,
+      imgBobl2: bobl_2,
+      imgBobl3: bobl_3,
       imgJustScrollOn: true,
     };
   }
@@ -36,17 +36,17 @@ export default class Main extends Component {
   tick() {
     if(this.state.imgJustScrollOn){
     this.setState({
-      imgJustScroll: <img src={main_line_3_off} alt="" className="main_line_3"></img>,
-      imgBobl2: <img src={bobl_2_off} alt="" className="bobl_2"></img>,
-      imgBobl3: <img src={bobl_3_off} alt="" className="bobl_3"></img>,
+      imgJustScroll: main_line_3_off,
+      imgBobl2: bobl_2_off,
+      imgBobl3: bobl_3_off,
       imgJustScrollOn: false,
     });
   }
   else{
     this.setState({
-      imgJustScroll: <img src={main_line_3} alt="" className="main_line_3"></img>,
-      imgBobl2: <img src={bobl_2} alt="" className="bobl_2"></img>,
-      imgBobl3: <img src={bobl_3} alt="" className="bobl_3"></img>,
+      imgJustScroll: main_line_3,
+      imgBobl2: bobl_2,
+      imgBobl3: bobl_3,
       imgJustScrollOn: true
     });
   }
@@ -54,6 +54,10 @@ export default class Main extends Component {
 
   componentDidMount() {
     this.interval = setInterval(() => this.tick(), 6000);
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.interval);
   }
 
   render() {
@@ -78,12 +82,13 @@ export default class Main extends Component {
           </div>
         
         <img src={bobl_1} alt="" className="bobl_1"></img>
-        {this.state.imgBobl2}
-        {this.state.imgBobl3}
+        <img src={this.state.imgBobl2} alt="" className="bobl_2"></img>
+        <img src={this.state.imgBobl3} alt="" className="bobl_3"></img>
         <img src={bobl_4} alt="" className="bobl_4"></img>
         <img src={main_line_1} alt="" className="main_line_1"></img>
         <img src={main_line_2} alt="" className="main_line_2"></img>
-        {this.state.imgJustScroll}
+        <img src={this.state.imgJustScroll} alt="" className="main_line_3"></img>
+        
         <img src={main_line_4} alt="" className="main_line_4"></img>
         <img src={background_line_1} alt="" className="lines-background1"></img>
         <img src={background_line_2} alt="" className="lines-background2"></img>
