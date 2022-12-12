@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes, } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes, } from "react-router-dom";
 import Layout from "../src/Pages/Layout/Layout"
 import Main from "../src/Pages/Main/Main"
 import Services from "../src/Pages/Services/Services"
@@ -11,7 +11,7 @@ import Contacts from "../src/Pages/Contacts/Contacts"
 
 function App() {
   return (
-    <BrowserRouter className="Navigation">
+    <HashRouter className="Navigation">
         <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />}/>
@@ -22,7 +22,7 @@ function App() {
           <Route path='contacts' element={<Contacts />}/>
         </Route>
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 //<Route path='*' element={<NotFoundPage />}/>
