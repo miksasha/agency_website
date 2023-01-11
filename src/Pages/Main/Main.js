@@ -17,6 +17,7 @@ import MinCard from "./MinCard"
 import icon1 from "../../images/icon1.png"
 import icon2 from "../../images/icon2.png"
 
+import main_title_underline_off from "../../images/main-underline-off.png"
 import main_line_3_off from "../../images/main-line3-off.png"
 import bobl_2_off from "../../images/bobl2-off.png"
 import bobl_3_off from "../../images/bobl3-off.png"
@@ -29,10 +30,15 @@ export default class Main extends Component {
       imgBobl2: bobl_2,
       imgBobl3: bobl_3,
       imgJustScrollOn: true,
+
+      main_title_underline: main_title_underline,
+      main_title_underline_on: true,
+      counter: 0,
+      nameOfAgency: <h1 id='nameOfAgency'>SanArt.IT</h1>,
     };
   }
 
-
+  //turn on and off lamp in right high corner
   tick() {
     if(this.state.imgJustScrollOn){
     this.setState({
@@ -52,12 +58,41 @@ export default class Main extends Component {
   }
   }
 
+  onOffUnderline () {
+    let intervalUnderline;
+   
+    intervalUnderline = setInterval(() => {
+      if(this.state.main_title_underline_on){
+        this.setState({
+          main_title_underline: main_title_underline_off,
+          main_title_underline_on: false,
+          counter: this.state.counter++,
+          nameOfAgency: <h1 id='nameOfAgency_off'>SanArt.IT</h1>
+        });
+      }
+      else{
+        this.setState({
+          main_title_underline: main_title_underline,
+          main_title_underline_on: true,
+          nameOfAgency: <h1 id='nameOfAgency'>SanArt.IT</h1>
+        });
+      }
+      if(this.state.counter===3){
+        clearInterval(intervalUnderline);
+        this.setState({
+          main_title_underline: main_title_underline,
+        });
+      }
+    } , 1000);
+  }
+
   componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 6000);
+    this.intervalJustScroll = setInterval(() => this.tick(), 6000);
+    this.onOffUnderline();
   }
 
   componentWillUnmount(){
-    clearInterval(this.interval);
+    clearInterval(this.intervalJustScroll);
   }
 
   render() {
@@ -65,8 +100,8 @@ export default class Main extends Component {
       <div className='main-page'>
         <div className='title'>
           <div className='name'>
-            <h1>SanArt.IT</h1>
-            <img src={main_title_underline} alt="" className="main_title_underline"></img>
+            {this.state.nameOfAgency}
+            <img src={this.state.main_title_underline} alt="" className="main_title_underline"></img>
           </div>
           <img src={main_title} alt="" className="main_title"></img>
         </div>

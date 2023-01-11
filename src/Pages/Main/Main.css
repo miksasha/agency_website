@@ -17,7 +17,7 @@ body {
 }
 
 /*title*/
-h1{
+#nameOfAgency{
     font-family: 'Audiowide';
     font-style: normal;
     font-weight: 400;
@@ -25,6 +25,18 @@ h1{
     margin-bottom: 0px;
     background:linear-gradient(284.18deg, #0DFFE6 -11.23%, rgba(255, 255, 255, 0) 50.68%), linear-gradient(102.54deg, rgba(13, 23, 255, 0.5) 0%, #A3A6FF 0%, rgba(255, 255, 255, 0) 30.75%), linear-gradient(179.05deg, rgba(255, 255, 255, 0) 21.8%, #FFC01E 161.95%), #FFFFFF;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+#nameOfAgency_off{
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(24px + 20 * (100vw / 1000));
+    margin-bottom: 0px;
+    background: linear-gradient(300.94deg, #0DFFE6 2.8%, rgba(255, 255, 255, 0) 71.85%), linear-gradient(102.54deg, rgba(13, 23, 255, 0.5) 0%, #0D17FF 0%, rgba(255, 255, 255, 0) 30.75%), #FFFFFF;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
