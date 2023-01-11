@@ -1,0 +1,31 @@
+.error_message{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.error_text{
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+    .error_text{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .error_text{
+        font-size: 16px;
+    }
+}

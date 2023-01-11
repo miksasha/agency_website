@@ -7,7 +7,7 @@ import OurTeam from "../src/Pages/OurTeam/OurTeam"
 import Portfolio from "../src/Pages/Portfolio/Portfolio"
 import Feedback from "../src/Pages/Feedback/Feedback"
 import Contacts from "../src/Pages/Contacts/Contacts"
-
+import NotFoundPage from "../src/Pages/NotFoundPage/NotFoundPage"
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path='portfolio' element={<Portfolio />}/>
           <Route path='feedback' element={<Feedback />}/>
           <Route path='contacts' element={<Contacts />}/>
+          <Route path='*' element={<NotFoundPage />}/>
         </Route>
         </Routes>
     </HashRouter>
