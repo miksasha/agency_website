@@ -1,0 +1,24 @@
+.feedback-page{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.comment-line{
+    display: flex;
+
+}
+
+/*background images*/
+.img-feed-background1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.img-feed-background2{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+

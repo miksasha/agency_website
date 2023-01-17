@@ -1,0 +1,82 @@
+.comment-block1{
+    position: relative;
+    width: 761px;
+    height: 501px;
+
+    background-image: url(../../images/comment-border1.png);
+    background-repeat: no-repeat;
+}
+
+.comment-block2{
+    position: relative;
+    width: 506px;
+    height: 501px;
+
+    background-image: url(../../images/comment-border2.png);
+    background-repeat: no-repeat;
+}
+
+.comment-block3{
+    position: relative;
+    width: 571px;
+    height: 501px;
+
+    background-image: url(../../images/comment-border3.png);
+    background-repeat: no-repeat;
+}
+
+.comment-block4{
+    position: relative;
+    width: 696px;
+    height: 501px;
+
+    background-image: url(../../images/comment-border4.png);
+    background-repeat: no-repeat;
+}
+
+.comment-content{
+    margin: 90px;
+    height: 315px;
+    overflow: auto;
+}
+
+.comment-content p{
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.photo-of-client{
+    margin-right: 30px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+/*.comment-content::-webkit-scrollbar {
+    width: 36px;
+}
+ 
+.comment-content::-webkit-scrollbar-thumb {
+    
+    background-image: url(../../images/scroll-t.png);
+    background-repeat: no-repeat;
+}*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    max-height: 10px;
+    
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5); 
+}

@@ -190,8 +190,6 @@
     }
 } 
 
-
-
 @media only screen and (max-width: 700px) {
 	.for-row{
         grid-template-columns: repeat(6, 30px);
