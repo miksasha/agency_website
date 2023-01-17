@@ -17,8 +17,7 @@
     background: #0DFFE6;
     filter: blur(25px);
     width: 255px;
-    height: auto;
-    min-height: 225px;
+    min-height: 232px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -32,11 +31,10 @@
 }
 
 .cards_about_us{
-    background: #0A0C19;
+    background: #000419;
     border-radius: 43px;
     width: 255px;
-    height: auto;
-    min-height: 225px;
+    min-height: 232px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -46,8 +44,7 @@
     background: #0DFFE6;
     filter: blur(25px);
     width: 255px;
-    height: auto;
-    min-height: 225px;
+    min-height: 232px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -59,9 +56,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 232px;
     gap: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
 }
 
 #text{

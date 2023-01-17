@@ -17,10 +17,10 @@ export default class Portfolio extends Component {
       arr: projectsInfo,
       cards: projectsInfo.slice(1*8-8,1*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />),
       pagination: <div className='page_nav'>
-      <a href='#' className='selected' onClick={event => this.pageChange(event)}>1</a>
-      <a href='#' onClick={event => this.pageChange(event)}>2</a>
-      <a href='#' onClick={event => this.pageChange(event)}>3</a>
-      <a href='#' onClick={event => this.pageChange(event)}>4</a>
+      <a href='#/portfolio' className='selected' onClick={event => this.pageChange(event)}>1</a>
+      <a href='#/portfolio' onClick={event => this.pageChange(event)}>2</a>
+      <a href='#/portfolio' onClick={event => this.pageChange(event)}>3</a>
+      <a href='#/portfolio' onClick={event => this.pageChange(event)}>4</a>
       </div>,
       currentPage: 1,
     };
@@ -50,10 +50,10 @@ export default class Portfolio extends Component {
     if(event.target.value == 'all'){
       this.setState( {arr: projectsInfo, cards: projectsInfo.slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)});
       this.setState( {pagination: <div className='page_nav'>
-      <a href='#' className='selected' onClick={event => this.pageChange(event)}>1</a>
-      <a href='#' onClick={event => this.pageChange(event)}>2</a>
-      <a href='#' onClick={event => this.pageChange(event)}>3</a>
-      <a href='#' onClick={event => this.pageChange(event)}>4</a>
+      <a href='#/portfolio' className='selected' onClick={event => this.pageChange(event)}>1</a>
+      <a href='#/portfolio' onClick={event => this.pageChange(event)}>2</a>
+      <a href='#/portfolio' onClick={event => this.pageChange(event)}>3</a>
+      <a href='#/portfolio' onClick={event => this.pageChange(event)}>4</a>
       </div>});
     }else{
       this.setState( {arr: projectsInfo.filter(element => element.type==event.target.value), cards: projectsInfo.filter(element => element.type==event.target.value).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)});
@@ -79,14 +79,14 @@ export default class Portfolio extends Component {
     for(let i=0; i<arr.length/8; i++){
       if(html == undefined){
       if(currentPageNum-1==i)
-      html.push(<a href='#' className='selected' onClick={event => this.pageChange(event)}>{i+1}</a>);
+      html.push(<a href='#/portfolio' className='selected' onClick={event => this.pageChange(event)}>{i+1}</a>);
       else
-      html.push(<a href='#' onClick={event => this.pageChange(event)}>{i+1}</a>);
+      html.push(<a href='#/portfolio' onClick={event => this.pageChange(event)}>{i+1}</a>);
       }else{
         if(currentPageNum-1==i)
-        html.push(<a href='#' className='selected' onClick={event => this.pageChange(event)}>{i+1}</a>);
+        html.push(<a href='#/portfolio' className='selected' onClick={event => this.pageChange(event)}>{i+1}</a>);
         else
-        html.push(<a href='#' onClick={event => this.pageChange(event)}>{i+1}</a>);
+        html.push(<a href='#/portfolio' onClick={event => this.pageChange(event)}>{i+1}</a>);
       }
     }
     if(html.length !== 1){
