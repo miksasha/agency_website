@@ -2,11 +2,15 @@
     display: flex;
     justify-content: center;
     margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .comment-line{
     display: flex;
+}
 
+.comment-line-for-smallscreen{
+    display: none;
 }
 
 /*background images*/
@@ -22,3 +26,38 @@
     bottom: 0px;
 }
 
+@media only screen and (max-width: 1210px) {
+    .comments{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .comment-line{
+        display: flex;
+        flex-direction: column;
+    }
+    .comment-line-for-smallscreen{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .comments{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .comment-line{
+        display: flex;
+        flex-direction: column;
+    }
+    .comment-line-for-smallscreen{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    
+}
