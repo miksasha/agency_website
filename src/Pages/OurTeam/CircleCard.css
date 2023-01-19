@@ -1,0 +1,116 @@
+/*Settings for color chenges in border*/
+
+.border_orange *{
+    stroke: #000419;
+}
+.border_blue *{
+    stroke: #000419;
+}
+.border_turquoise *{
+    stroke: #000419;
+}
+
+.border_orange:hover{
+    position: absolute;
+    z-index: 2;
+}
+.border_orange:hover *{
+    stroke: #FFC01E;
+}
+.border_orange:hover .white{
+    stroke: #ffffff;
+}
+
+.border_turquoise:hover{
+    position: absolute;
+    z-index: 2;
+}
+.border_turquoise:hover *{
+    stroke: #0DFFE6;
+}
+.border_turquoise:hover .white{
+    stroke: #ffffff;
+}
+
+.border_blue:hover{
+    position: absolute;
+    z-index: 2;
+}
+.border_blue:hover *{
+    stroke: #0D17FF;
+}
+
+.border_blue:hover .white{
+    stroke: #ffffff;
+}
+
+/*Position*/
+.circle-card{
+    position: relative;
+    width: 196px;
+    height: 196px;
+    overflow: hidden
+}
+
+.circle-card:hover .circle-photo-of-worker{
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+}
+
+.circle-photo-of-worker{
+    position: absolute;
+    left:18px;
+    top:18px;
+    z-index: 1;
+    width: 160px;
+    height: 160px;
+    transition: all 0.3s;
+}
+
+/*if card was choosen*/
+/*.circle-photo-of-worker-choose{
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+}
+
+
+.border_orange_choose{
+    position: absolute;
+    z-index: 2;
+}
+.border_orange_choose *{
+    stroke: #FFC01E;
+}
+.border_orange_choose .white{
+    stroke: #ffffff;
+}
+
+.border_turquoise_choose{
+    position: absolute;
+    z-index: 2;
+}
+.border_turquoise_choose *{
+    stroke: #0DFFE6;
+}
+.border_turquoise_choose .white{
+    stroke: #ffffff;
+}
+
+.border_blue_choose{
+    position: absolute;
+    z-index: 2;
+}
+.border_blue_choose *{
+    stroke: #0D17FF;
+}
+.border_blue_choose .white{
+    stroke: #ffffff;
+}*/

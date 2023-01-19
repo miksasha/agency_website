@@ -1,0 +1,64 @@
+/*Settings for color chenges in border*/
+.worker_frame_orange *{
+    stroke: #FFC01E;
+}
+
+.worker_frame_orange .white{
+    stroke: #ffffff;
+}
+
+.worker_frame_turquoise *{
+    stroke: #0DFFE6;
+}
+
+.worker_frame_turquoise .white{
+    stroke: #ffffff;
+}
+
+.worker_frame_blue *{
+    stroke: #0D17FF;
+}
+
+.worker_frame_blue .white{
+    stroke: #ffffff;
+}
+
+/*Settings for positions of elements*/
+.worker-info{
+    position: relative;
+}
+.photo-of-worker{
+  position: absolute;
+  left: 92px;
+  top: 92px;
+}
+
+.worker-text-info{
+    position: absolute;
+    left: 507px;
+    top: 92px;
+}
+.worker-info .project_name{
+    font-size: 30px;
+    margin: 0px 0px 0px 30px;
+}
+
+.position{
+    font-family: 'Roboto Condensed';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+
+    margin: 10px 0px 30px 30px;
+}
+
+.simple_text{
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin: 0px 0px 0px 30px;
+}

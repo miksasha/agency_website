@@ -37,6 +37,4 @@ export const projectsInfo = [
     {name: 'Corporate web', days: 45, date: "2022-02-12", photo: image_design, type: 'Design', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'SDF web', days: 254, date: "2021-04-14", photo: image_react, type: 'React', best: true, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
     {name: 'Corporate app', days: 135, date: "2020-08-08", photo: image_design, type: 'Design', best: false, link:"https://www.figma.com/proto/siQsEyfhKgnb4bl8VTMPq2/DN?page-id=0%3A1&node-id=18%3A122&scaling=scale-down-width"},
-
-
 ];

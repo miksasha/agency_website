@@ -1,3 +1,27 @@
 .our-team-page{
-    background-color: #000419;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.worker-info{
+    margin-top: 4%;
+}
+
+.all-workers{
+    display: flex;
+    width: min-content;
+    margin-bottom: 70px;
+}
+
+.img-our-team-background2{
+    width: 30%;
+    position: absolute;
+    right: 0px;
+    top: 80%;
+    opacity: 0.5;
+}
+
+.worker-scroll-left{
+    transform: rotate(180deg);
 }
