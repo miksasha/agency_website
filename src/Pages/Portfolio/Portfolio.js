@@ -65,7 +65,7 @@ export default class Portfolio extends Component {
     if(event.target.checked){
       this.setState(state => ({ ...state, currentPage: 1 }));
       this.setState(state => ({ cards: [...state.arr].filter(element => element.best==event.target.checked).slice(0, 8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
-      this. pagination(this.state.arr.filter(element => element.best==event.target.checked), 1);
+      this.pagination(this.state.arr.filter(element => element.best==event.target.checked), 1);
     }else{
       this.setState(state => ({ cards: [...state.arr].slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
       this.pagination(this.state.arr, 1);

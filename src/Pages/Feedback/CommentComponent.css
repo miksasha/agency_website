@@ -73,18 +73,18 @@
     float: left;
 }
 
-::-webkit-scrollbar {
+.comment-content::-webkit-scrollbar {
     width: 6px;
 }
  
 
-/*scroll rules for component and whole website*/
-::-webkit-scrollbar-track {
+/*scroll rules for component*/
+.comment-content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3); 
     border-radius: 10px;
 }
  
-::-webkit-scrollbar-thumb {
+.comment-content::-webkit-scrollbar-thumb {
     max-height: 10px;
     
     border-radius: 10px;

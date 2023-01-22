@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './NotFoundPage.css'
 import background1 from "../../images/contact-line1.png"
 import background2 from "../../images/contact-line2.png"
-import number404 from "../../images/eror-number.png"
+import number404 from "../../images/error-number.svg"
 
 export default class NotFoundPage extends Component {
   render() {

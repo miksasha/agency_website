@@ -47,7 +47,7 @@
 /*Position*/
 .circle-card{
     position: relative;
-    width: 196px;
+    min-width: 196px;
     height: 196px;
     overflow: hidden
 }
@@ -72,7 +72,7 @@
 }
 
 /*if card was choosen*/
-/*.circle-photo-of-worker-choose{
+.circle-photo-of-worker-choose{
     position: absolute;
     left: 28px;
     top: 28px;
@@ -80,7 +80,6 @@
     width: 140px;
     height: 140px;
 }
-
 
 .border_orange_choose{
     position: absolute;
@@ -113,4 +112,4 @@
 }
 .border_blue_choose .white{
     stroke: #ffffff;
-}*/
+}
