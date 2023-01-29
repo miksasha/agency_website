@@ -25,11 +25,10 @@ export default class OurTeam extends Component {
       let result_array = new Array;
       for(let i = 0; i < workersInfo.length; i++){
         if(i==id){
-          console.log(arr[i].color);
-          result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color + "_choose"} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} />);
+          result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color + "_choose"} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} position = {arr[i].position} />);
           continue;
         }
-        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} />);
+        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} position = {arr[i].position} />);
       }
       return result_array;
     }
@@ -42,6 +41,17 @@ export default class OurTeam extends Component {
     });
   }
 
+  scrollWorkers = (event) => {
+    let current_coordinates = document.getElementById("all-workers-scroll").scrollLeft;
+    if(event.target.className == 'worker-scroll-left'){
+      document.getElementById("all-workers-scroll").scrollLeft = current_coordinates - 80;
+    }
+    if(event.target.className == 'worker-scroll-right'){
+      document.getElementById("all-workers-scroll").scrollLeft = current_coordinates + 80;
+    }
+  }
+
+
   render() {
     return (
       <div  className='our-team-page'>
@@ -50,10 +60,15 @@ export default class OurTeam extends Component {
 
         {this.state.big_info_window}
 
-        <div className='all-workers'  onClick={event => this.changeInfoWindow(event)}>
-        {this.state.worker_cards}
+          <div className='all-workers-with-scroll' onClick={event => this.scrollWorkers(event)}>
+            <img src={scroll} alt="" className="worker-scroll-left"></img>
+              <div id='all-workers-scroll' className='all-workers' onClick={event => this.changeInfoWindow(event)}>
+                {this.state.worker_cards}
+              </div>
+            <img src={scroll} alt="" className="worker-scroll-right"></img>
+          </div>
+
         </div>
-      </div>
     )
   }
 }
