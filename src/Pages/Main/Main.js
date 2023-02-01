@@ -62,27 +62,34 @@ export default class Main extends Component {
     let intervalUnderline;
    
     intervalUnderline = setInterval(() => {
-      if(this.state.main_title_underline_on){
-        this.setState({
+      this.setState((oldState) => {
+        if (oldState.main_title_underline_on) {
+          console.log(oldState.counter);
+         return { 
           main_title_underline: main_title_underline_off,
           main_title_underline_on: false,
-          counter: this.state.counter++,
-          nameOfAgency: <h1 id='nameOfAgency_off'>SanArt.IT</h1>
-        });
-      }
-      else{
-        this.setState({
-          main_title_underline: main_title_underline,
-          main_title_underline_on: true,
-          nameOfAgency: <h1 id='nameOfAgency'>SanArt.IT</h1>
-        });
-      }
-      if(this.state.counter===3){
-        clearInterval(intervalUnderline);
-        this.setState({
-          main_title_underline: main_title_underline,
-        });
-      }
+          counter: ++oldState.counter,
+          nameOfAgency: <h1 id='nameOfAgency_off'>SanArt.IT</h1> 
+        };
+        }else{
+          if (oldState.counter>=3) {
+            clearInterval(intervalUnderline);
+            console.log("here");
+            return { 
+              main_title_underline: main_title_underline,
+              main_title_underline_on: true,
+              nameOfAgency: <h1 id='nameOfAgency'>SanArt.IT</h1> 
+           };
+          }else{
+              return { 
+                main_title_underline: main_title_underline,
+                main_title_underline_on: true,
+                nameOfAgency: <h1 id='nameOfAgency'>SanArt.IT</h1> 
+              };
+          }
+        }
+      
+      });
     } , 1000);
   }
 

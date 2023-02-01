@@ -15,8 +15,7 @@ export default class OurTeam extends Component {
 		this.state = { 
       arr: workersInfo,
       worker_cards: this.choosen_card(workersInfo, 0),
-      big_info_window: <InfoWingow class={"worker_frame_"+workersInfo[0].color}  photo_src = {workersInfo[0].photo_big} 
-      fullname = {workersInfo[0].fullname} position = {workersInfo[0].position} text = {workersInfo[0].text}/> };
+      big_info_window: workersInfo[0], };
     }
 
     choosen_card = (arr, id)=>{
@@ -35,8 +34,7 @@ export default class OurTeam extends Component {
 
   changeInfoWindow = (event) => {
     this.setState( {
-      big_info_window: <InfoWingow class={"worker_frame_"+workersInfo[event.target.id].color}  photo_src = {workersInfo[event.target.id].photo_big} 
-      fullname = {workersInfo[event.target.id].fullname} position = {workersInfo[event.target.id].position} text = {workersInfo[event.target.id].text}/>, 
+      big_info_window: workersInfo[event.target.id], 
       worker_cards: this.choosen_card(workersInfo, event.target.id),
     });
   }
@@ -58,8 +56,8 @@ export default class OurTeam extends Component {
         <img src={background_ourteam_1} alt="" className="img-feed-background1"></img>
         <img src={background_ourteam_2} alt="" className="img-our-team-background2"></img>
 
-        {this.state.big_info_window}
-
+        <InfoWingow class={"worker_frame_"+this.state.big_info_window.color}  photo_src = {this.state.big_info_window.photo_big} 
+      fullname = {this.state.big_info_window.fullname} position = {this.state.big_info_window.position} text = {this.state.big_info_window.text}/>
           <div className='all-workers-with-scroll' onClick={event => this.scrollWorkers(event)}>
             <img src={scroll} alt="" className="worker-scroll-left"></img>
               <div id='all-workers-scroll' className='all-workers' onClick={event => this.changeInfoWindow(event)}>
@@ -72,8 +70,3 @@ export default class OurTeam extends Component {
     )
   }
 }
-/*
-<img src={scroll} alt="" className="worker-scroll-right"></img>
-          {this.state.worker_cards}
-          <img src={scroll} alt="" className="worker-scroll-left"></img>
-          */ 
