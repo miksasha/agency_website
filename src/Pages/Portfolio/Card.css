@@ -1,17 +1,7 @@
-@font-face {
-	font-family: RobotoCondensed;
-	src: url("/src/Fonts/RobotoCondensed-Regular.ttf")
-}
-
-@font-face {
-	font-family: BebasNeue;
-	src: url("/src/Fonts/BebasNeue-Regular.ttf")
-}
-
 span {
     color: #fff;
     font-family: RobotoCondensed;
-    font-size: 16px;
+    font-size: var(--font-size-normal);
 }
 
 .project_name {

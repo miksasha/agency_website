@@ -8,11 +8,16 @@
 	src: url("/src/Fonts/BebasNeue-Regular.ttf")
 }
 
+:root {
+    --background-color: #000419;
+    --font-size-normal: 16px;
+  }
+
 body {
-    background-color: #000419;
+    background-color: var(--background-color);
 }
 .main-page {
-    background-color: #000419;
+    background-color: var(--background-color);
     position: relative;
 }
 
@@ -190,7 +195,6 @@ h2{
     height: auto;
     transform: rotate(180deg);
 }
-
 
 
 

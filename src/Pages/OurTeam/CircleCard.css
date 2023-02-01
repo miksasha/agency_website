@@ -1,13 +1,13 @@
 /*Settings for color chenges in border*/
 
 .border_orange *{
-    stroke: #000419;
+    stroke: var(--background-color);
 }
 .border_blue *{
-    stroke: #000419;
+    stroke: var(--background-color);
 }
 .border_turquoise *{
-    stroke: #000419;
+    stroke: var(--background-color);
 }
 
 .circle-card:hover .border_orange{

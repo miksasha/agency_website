@@ -61,7 +61,7 @@
 .comment-content p{
     font-family: 'Roboto Condensed';
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--font-size-normal);
     color: #FFFFFF;
     margin-top: 20px;
     margin-right: 40px;
