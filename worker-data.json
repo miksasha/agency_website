@@ -1,0 +1,18 @@
+{
+    "workersInfo" :[
+        {"id": 0, "fullname": "Kateryna Petrychenko", "position": "UI / UX designer", "text": "My goal and motivation.", 
+        "photo_big": "/imagejson/workers-photo/employee1.png", "photo_small": "/imagejson/workers-photo/employee_small_1.png", "color": "turquoise", "choose":"circle-photo-of-worker"},
+        {"id": 1, "fullname": "Oleksandr Vanin", "position": "Angular developer", "text": "My goal and motivation.", 
+        "photo_big": "/imagejson/workers-photo/employee2.png", "photo_small": "/imagejson/workers-photo/employee_small_2.png", "color": "blue", "choose":"circle-photo-of-worker"},
+        {"id": 2, "fullname": "Ulyana Mykhailenko", "position": "UI / UX designer", "text": "My goal and motivation.", 
+        "photo_big": "/imagejson/workers-photo/employee3.png", "photo_small": "/imagejson/workers-photo/employee_small_3.png", "color": "orange", "choose":"circle-photo-of-worker"},
+        {"id": 3, "fullname": "Igor Boron", "position": "React developer", "text": "My goal and motivation.", 
+        "photo_big": "/imagejson/workers-photo/employee4.png", "photo_small": "/imagejson/workers-photo/employee_small_4.png", "color": "turquoise", "choose":"circle-photo-of-worker"},
+        {"id": 4, "fullname": "Valerian Potroch", "position": "React developer", "text": "My goal and motivation.", 
+        "photo_big": "/imagejson/workers-photo/employee5.png", "photo_small": "/imagejson/workers-photo/employee_small_5.png", "color": "blue", "choose":"circle-photo-of-worker"},
+        {"id": 5, "fullname": "Oleksandra Mykhailenko", "position": "UI / UX designer", "text": "My goal and motivation.", 
+        "photo_big": "/imagejson/workers-photo/employee6.png", "photo_small": "/imagejson/workers-photo/employee_small_6.png", "color": "orange", "choose":"circle-photo-of-worker"},
+        {"id": 6, "fullname": "Igor Kropevniski", "position": "Angular developer", "text": "My goal and motivation.", 
+        "photo_big": "/imagejson/workers-photo/employee7.png", "photo_small": "/imagejson/workers-photo/employee_small_7.png", "color": "turquoise", "choose":"circle-photo-of-worker"}
+    ]
+}

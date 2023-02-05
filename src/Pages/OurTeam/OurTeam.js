@@ -4,7 +4,6 @@ import background_ourteam_1 from "../../images/feedback-line1.png"
 import background_ourteam_2 from "../../images/main-background-line3.png"
 import InfoWingow from "./InfoWingow"
 import CircleCard from "./CircleCard"
-import {workersInfo} from './DataWorker.js'
 
 import scroll from "../../images/ourteam/scroll.svg"
 
@@ -13,30 +12,46 @@ export default class OurTeam extends Component {
   constructor() {
 		super();
 		this.state = { 
-      arr: workersInfo,
-      worker_cards: this.choosen_card(workersInfo, 0),
-      big_info_window: workersInfo[0], };
-    }
+      arr: [],
+      worker_cards: [],
+      big_info_window: {}, };
+  }
 
-    choosen_card = (arr, id)=>{
-      arr.map(element => element.choose="circle-photo-of-worker");
-      arr[id].choose="circle-photo-of-worker-choose";
-      let result_array = new Array;
-      for(let i = 0; i < workersInfo.length; i++){
-        if(i==id){
-          result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color + "_choose"} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} position = {arr[i].position} />);
-          continue;
-        }
-        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} position = {arr[i].position} />);
+  componentDidMount() {
+    fetch('http://localhost:3000/workersInfo')
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+        arr: data,
+        worker_cards: this.choosen_card(data, 0),
+        big_info_window: data[0],
+      })
+      
+      console.log(data)
+      console.log('state => ', this.state.arr)
+    })
+    .catch(error => console.error(error))
+  }
+
+  choosen_card = (arr, id)=>{
+    arr.map(element => element.choose="circle-photo-of-worker");
+    arr[id].choose="circle-photo-of-worker-choose";
+    let result_array = new Array;
+    for(let i = 0; i < arr.length; i++){
+      if(i==id){
+        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color + "_choose"} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} position = {arr[i].position} />);
+        continue;
       }
-      return result_array;
+        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} position = {arr[i].position} />);
     }
+    return result_array;
+  }
 
   changeInfoWindow = (event) => {
-    this.setState( {
-      big_info_window: workersInfo[event.target.id], 
-      worker_cards: this.choosen_card(workersInfo, event.target.id),
-    });
+    this.setState( state => ({
+      big_info_window: [...state.arr][event.target.id], 
+      worker_cards: this.choosen_card([...state.arr], event.target.id),
+    }));
   }
 
   scrollWorkers = (event) => {
