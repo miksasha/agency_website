@@ -3,19 +3,21 @@ import './Portfolio.css'
 import background1 from "../../images/portfolio-line1.png"
 import background2 from "../../images/portfolio-line2.png"
 import Card from "./Card"
-import {projectsInfo} from './Data'
 
 function byField(field) {
   return (a, b) => a[field] > b[field] ? 1 : -1;
 }
 
+        
 export default class Portfolio extends Component {
   
   constructor() {
 		super();
+    
 		this.state = { 
-      arr: projectsInfo,
-      cards: projectsInfo.slice(1*8-8,1*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />),
+      constArr:[],
+      arr:[],
+      cards: [],
       pagination: <div className='page_nav'>
       <a href='#/portfolio' className='selected' onClick={event => this.pageChange(event)}>1</a>
       <a href='#/portfolio' onClick={event => this.pageChange(event)}>2</a>
@@ -24,7 +26,20 @@ export default class Portfolio extends Component {
       </div>,
       currentPage: 1,
     };
+    
 	}
+
+  componentDidMount() {
+    fetch('http://localhost:3000/portfolioInfo')
+    .then(response => response.json())
+    .then(data => {
+      this.setState({constArr:data,
+        arr: data.sort(byField('name')),
+        cards: data.sort(byField('name')).slice(1*8-8,1*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />),
+      })
+    })
+    .catch(error => console.error(error))
+  }
 
   pageChange = (event) => {
     this.setState(state => ({ cards: [...state.arr].slice(event.target.innerText*8-8,event.target.innerText*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />),
@@ -34,21 +49,30 @@ export default class Portfolio extends Component {
 
   sortHendler = (event) => {
     if(event.target.value == 'alphabetsort'){
-      this.setState(state => ({ cards: [...state.arr].sort(byField('name')).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days}  projectType={card.type} date={card.date} link={card.link}/>)}));
+      this.setState(state => ({ 
+        arr: [...state.arr].sort(byField('name')),
+        cards: [...state.arr].sort(byField('name')).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days}  projectType={card.type} date={card.date} link={card.link}/>)}));
     }
     if(event.target.value == 'durationsort'){
-      this.setState(state => ({ cards: [...state.arr].sort(byField('days')).slice( this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
+      this.setState(state => ({ 
+        arr: [...state.arr].sort(byField('days')),
+        cards: [...state.arr].sort(byField('days')).slice( this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
     }
 
     if(event.target.value == 'timesort'){
-      this.setState(state => ({ cards: [...state.arr].sort(byField('date')).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
+      this.setState(state => ({ 
+        arr: [...state.arr].sort(byField('date')),
+        cards: [...state.arr].sort(byField('date')).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)}));
     }
   }
 
   filterHendler = (event) => {
     
     if(event.target.value == 'all'){
-      this.setState( {arr: projectsInfo, cards: projectsInfo.slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)});
+      this.setState( state => ({
+        arr: [...state.constArr], 
+        cards: [...state.constArr].slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)
+      }));
       this.setState( {pagination: <div className='page_nav'>
       <a href='#/portfolio' className='selected' onClick={event => this.pageChange(event)}>1</a>
       <a href='#/portfolio' onClick={event => this.pageChange(event)}>2</a>
@@ -56,8 +80,11 @@ export default class Portfolio extends Component {
       <a href='#/portfolio' onClick={event => this.pageChange(event)}>4</a>
       </div>});
     }else{
-      this.setState( {arr: projectsInfo.filter(element => element.type==event.target.value), cards: projectsInfo.filter(element => element.type==event.target.value).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />)});
-      this.pagination(projectsInfo.filter(element => element.type==event.target.value), 1);
+      this.setState( state => ({
+        arr: [...state.constArr].filter(element => element.type==event.target.value), 
+        cards: [...state.constArr].filter(element => element.type==event.target.value).slice(1*8-8, 1*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date} link={card.link} />),
+        currentPage: 1,}));
+      this.pagination(this.state.constArr.filter(element => element.type==event.target.value), 1);
     }
   }
 
@@ -99,8 +126,8 @@ export default class Portfolio extends Component {
   SearchHendler = (event) => {
     document.getElementsByClassName("all-select")[0].removeAttribute("selected");
     document.getElementsByClassName("all-select")[0].setAttribute("selected", true);
-    this.pagination(projectsInfo.filter(element => element.name.toLowerCase().includes(event.target.value.toLowerCase())), 1);
-   this.setState( {cards: projectsInfo.filter(element => element.name.toLowerCase().includes(event.target.value.toLowerCase())).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date}  link={card.link}/>)});
+    this.pagination(this.state.constArr.filter(element => element.name.toLowerCase().includes(event.target.value.toLowerCase())), 1);
+   this.setState( state => ({cards: [...state.constArr].filter(element => element.name.toLowerCase().includes(event.target.value.toLowerCase())).slice(this.state.currentPage*8-8, this.state.currentPage*8).map((card, index) => <Card key={index} image={card.photo} projectName={card.name} days={card.days} projectType={card.type} date={card.date}  link={card.link}/>)}));
    }
 
   render() {

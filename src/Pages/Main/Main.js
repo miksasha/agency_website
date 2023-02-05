@@ -64,7 +64,6 @@ export default class Main extends Component {
     intervalUnderline = setInterval(() => {
       this.setState((oldState) => {
         if (oldState.main_title_underline_on) {
-          console.log(oldState.counter);
          return { 
           main_title_underline: main_title_underline_off,
           main_title_underline_on: false,
@@ -74,7 +73,6 @@ export default class Main extends Component {
         }else{
           if (oldState.counter>=3) {
             clearInterval(intervalUnderline);
-            console.log("here");
             return { 
               main_title_underline: main_title_underline,
               main_title_underline_on: true,
