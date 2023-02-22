@@ -85,13 +85,112 @@ h2{
     grid-column-gap: 30px;
 }
 
-.whu_us{
+.why_us{
     padding-top: 45%;
     margin-left: auto;
     margin-right: auto;
     width: max-content;
     position: relative;
 }
+
+/*leafs*/
+.all_leafs{
+    margin-top: 35vw;
+    height: 35vh;
+}
+
+.back_leaf_1{
+    position: absolute;
+    width: 20%;
+    left: 0px;
+    bottom: 6%;
+    z-index: 1;
+}
+
+.back_leaf_2{
+    position: absolute;
+    width: 30%;
+    left: 20%;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.back_leaf_3{
+    position: absolute;
+    width: 25%;
+    left: 60%;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.light_for_leafs{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: 3;
+}
+
+.leaf_1{
+    position: absolute;
+    width: 44%;
+    left: 1%;
+    bottom: 0px;
+    z-index: 4;
+}
+
+.leaf_1:hover{
+    position: absolute;
+    width: 44%;
+    left: 1%;
+    bottom: 0px;
+    z-index: 4;
+
+    transform-origin: 10% bottom;
+    transform: rotate(10deg);
+    transition: all 0.8s;
+    
+}
+
+.leaf_2{
+    position: absolute;
+    width: 50%;
+    left: 30%;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.leaf_2:hover{
+    position: absolute;
+    width: 50%;
+    left: 30%;
+    bottom: 0px;
+    z-index: 2;
+    
+    transform-origin: 80% bottom;
+    transform: rotate(-10deg);
+    transition: all 0.8s;
+}
+
+.leaf_3{
+    position: absolute;
+    width: 40%;
+    left: 60%;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.leaf_3:hover{
+    position: absolute;
+    width: 40%;
+    left: 60%;
+    bottom: 0px;
+    z-index: 2;
+    
+    transform-origin: 8% bottom;
+    transform: rotate(10deg);
+    transition: all 0.8s;
+}
+
 
 /*bobls*/
 .bobl_1{
@@ -186,7 +285,7 @@ h2{
     height: auto;
 }
 
-.lines-background3{
+/*.lines-background3{
     position: absolute;
     left: 0px;
     top: 90%;
@@ -195,16 +294,14 @@ h2{
     height: auto;
     transform: rotate(180deg);
 }
-
+*/
 
 
 /*adaptation*/
 @media only screen and (max-width: 1400px) {
 
     .mincards{
-        display: grid;
         grid-template-columns: repeat(4, 200px);
-        grid-column-gap: 30px;
     }
     .bobl_4{
         position: absolute;
@@ -220,9 +317,7 @@ h2{
 @media only screen and (max-width: 1000px) {
 
     .mincards{
-        display: grid;
         grid-template-columns: repeat(4, 150px);
-        grid-column-gap: 30px;
     }
     .bobl_2{
         right: 5px;
@@ -237,7 +332,6 @@ h2{
 @media only screen and (max-width: 768px) {
 
     .mincards{
-        display: grid;
         grid-template-columns: repeat(2, 150px);
         grid-template-rows: repeat(2, 260px);
         row-gap: 30px;
@@ -250,6 +344,10 @@ h2{
     .bobl_4{
         top: 400px;
     }
+    .all_leafs{
+        margin-top: -10vw;
+    }
+    
     
 } 
 @media only screen and (max-width: 600px) {
@@ -261,6 +359,9 @@ h2{
     .bobl_4{
         top: 300px;
     }
+    .all_leafs{
+        margin-top: -20vw;
+    }
     
 } 
 @media only screen and (max-width: 400px) {
@@ -269,8 +370,6 @@ h2{
         display: grid;
         grid-template-columns: repeat(1, 150px);
         grid-template-rows: repeat(4, 260px);
-        row-gap: 30px;
-        grid-column-gap: 30px;
     }
     .bobld_2{
         right: 5px;
@@ -279,7 +378,9 @@ h2{
     .bobl_4{
         top: 250px;
     }
-    
+    .all_leafs{
+        margin-top: -50vw;
+    }
 } 
 
 

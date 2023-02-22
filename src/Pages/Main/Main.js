@@ -22,6 +22,14 @@ import main_line_3_off from "../../images/main-line3-off.png"
 import bobl_2_off from "../../images/bobl2-off.png"
 import bobl_3_off from "../../images/bobl3-off.png"
 
+import back_leaf_1 from "../../images/backleaf1.png"
+import back_leaf_2 from "../../images/backleaf2.png"
+import back_leaf_3 from "../../images/backleaf3.png"
+import light_for_leafs from "../../images/light-for-leafs.png"
+import leaf_1 from "../../images/leaf1.png"
+import leaf_2 from "../../images/leaf2.png"
+import leaf_3 from "../../images/leaf3.png"
+
 export default class Main extends Component {
   constructor(props) {
     super(props);
@@ -111,7 +119,7 @@ export default class Main extends Component {
           <img src={main_title} alt="" className="main_title"></img>
         </div>
 
-        <div className='whu_us'>
+        <div className='why_us'>
             <h2>Why us?</h2>
             <div className='mincards'>
             <MinCard image_or_number={<img src={icon1} alt="" className="icon"></img>} text={"We always complete projects on time"} />
@@ -119,7 +127,17 @@ export default class Main extends Component {
             <MinCard image_or_number={<img src={icon2} alt="" className="icon"></img>} text={"We work with stellar clients"} />
             <MinCard image_or_number={20} text={"professional employees"} />
             </div>
-          </div>
+        </div>
+
+        <div className='all_leafs'>
+          <img src={back_leaf_1} alt="" className="back_leaf_1"></img>
+          <img src={back_leaf_2} alt="" className="back_leaf_2"></img>
+          <img src={back_leaf_3} alt="" className="back_leaf_3"></img>
+          <img src={light_for_leafs} alt="" className="light_for_leafs"></img>
+          <img src={leaf_1} alt="" className="leaf_1"></img>
+          <img src={leaf_2} alt="" className="leaf_2"></img>
+          <img src={leaf_3} alt="" className="leaf_3"></img>
+        </div>
         
         <img src={bobl_1} alt="" className="bobl_1"></img>
         <img src={this.state.imgBobl2} alt="" className="bobl_2"></img>
@@ -132,7 +150,6 @@ export default class Main extends Component {
         <img src={main_line_4} alt="" className="main_line_4"></img>
         <img src={background_line_1} alt="" className="lines-background1"></img>
         <img src={background_line_2} alt="" className="lines-background2"></img>
-        <img src={background_line_3} alt="" className="lines-background3"></img>
       </div>
     )
   }
