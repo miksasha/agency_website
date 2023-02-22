@@ -71,8 +71,13 @@ export default class OurTeam extends Component {
         <img src={background_ourteam_1} alt="" className="img-feed-background1"></img>
         <img src={background_ourteam_2} alt="" className="img-our-team-background2"></img>
 
-        <InfoWingow class={"worker_frame_"+this.state.big_info_window.color}  photo_src = {this.state.big_info_window.photo_big} 
-      fullname = {this.state.big_info_window.fullname} position = {this.state.big_info_window.position} text = {this.state.big_info_window.text}/>
+        <InfoWingow 
+        class={"worker_frame_"+this.state.big_info_window.color}  
+        photo_src = {this.state.big_info_window.photo_big} 
+        fullname = {this.state.big_info_window.fullname} 
+        position = {this.state.big_info_window.position} 
+        text = {this.state.big_info_window.text}/>
+        
           <div className='all-workers-with-scroll' onClick={event => this.scrollWorkers(event)}>
             <img src={scroll} alt="" className="worker-scroll-left"></img>
               <div id='all-workers-scroll' className='all-workers' onClick={event => this.changeInfoWindow(event)}>

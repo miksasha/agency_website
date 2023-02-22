@@ -130,3 +130,72 @@
 .border_blue_choose .white{
     stroke: #ffffff;
 }
+
+
+@media only screen and (max-width: 840px) {
+    .border_orange {
+        margin-top: -37px;
+        width: 120px;
+    }
+    .border_blue {
+        width: 120px;
+        margin-top: -37px;
+    }
+    .border_turquoise {
+        margin-top: -37px;
+        width: 120px;
+    }
+    .circle-card:hover .border_orange {
+        margin-top: -37px;
+        width: 120px;
+    }
+    .circle-card:hover .border_turquoise {
+        margin-top: -37px;
+        width: 120px;
+    }
+    .circle-card:hover .border_blue {
+        margin-top: -37px;
+        width: 120px;
+    }
+    /*Position*/
+.circle-card{
+    min-width: 120px;
+    height: 120px;
+    overflow: hidden
+}
+
+.circle-card:hover .circle-photo-of-worker{
+    left: 21px;
+    top: 21px;
+    width: 80px;
+    height: 80px;
+}
+
+.circle-photo-of-worker{
+    left:18px;
+    top:18px;
+    width: 90px;
+    height: 90px;
+}
+
+/*if card was choosen*/
+.circle-photo-of-worker-choose{
+    left: 21px;
+    top: 21px;
+    width: 80px;
+    height: 80px;
+}
+.border_orange_choose{
+    width: 120px;
+    margin-top: -37px;
+}
+.border_turquoise_choose{
+    width: 120px;
+    margin-top: -37px;
+}
+.border_blue_choose{
+    width: 120px;
+    margin-top: -37px;
+}  
+}
+

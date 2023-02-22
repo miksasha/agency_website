@@ -43,8 +43,8 @@
     margin-top: 70px;
     padding-left: 20px;
     cursor: pointer;
-    
 }
+
 .worker-scroll-right{
     transform: rotate(180deg);
     margin-top: 70px;
@@ -55,4 +55,63 @@
 .all-workers-with-scroll{
     display: flex;
     align-items: flex-start;
+}
+
+/*adaptation*/
+@media only screen and (max-width: 1400px) {
+    .all-workers{
+        width: 760px;
+    } 
+} 
+
+@media only screen and (max-width: 980px) {
+    .all-workers{
+        width: 560px;
+    } 
+}
+
+@media only screen and (max-width: 840px) {
+    .all-workers{
+        width: 420px;
+    } 
+    .all-workers-with-scroll{
+        margin-top: 20px;
+    }
+    .worker-scroll-left{
+        margin-top: 40px;
+        width: 50px;
+    }
+    .worker-scroll-right{
+        margin-top: 40px;
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .all-workers-with-scroll{
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .all-workers{
+        width: 300px;
+    } 
+}
+
+@media only screen and (max-width: 500px) {
+    .all-workers-with-scroll{
+        margin-top: 150px;
+    }
+    .all-workers{
+        width: 200px;
+    } 
+    .worker-scroll-left{
+        margin-top: 40px;
+        width: 30px;
+    }
+    .worker-scroll-right{
+        margin-top: 40px;
+        width: 30px;
+    }
 }

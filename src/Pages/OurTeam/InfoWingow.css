@@ -62,3 +62,133 @@
     margin-right: 40px;
     margin: 0px 0px 0px 30px;
 }
+
+/*adaptation*/
+@media only screen and (max-width: 1400px) {
+    .worker_frame_orange{
+        width: 1000px;
+        height: auto;
+    }
+    .worker_frame_turquoise{
+        width: 1000px;
+        height: auto;
+    }
+    .worker_frame_blue{
+        width: 1000px;
+        height: auto;
+    }
+
+    .photo-of-worker{
+        width: 300px;
+        position: absolute;
+        top: 92px;
+    }
+    
+    .worker-text-info{
+        position: absolute;
+        left: 407px;
+        top: 92px;
+    }
+} 
+
+@media only screen and (max-width: 980px) {
+    .worker-info{
+        margin-top: 50px;
+    }
+    .worker_frame_orange{
+        width: 800px;
+        height: auto;
+    }
+    .worker_frame_turquoise{
+        width: 800px;
+        height: auto;
+    }
+    .worker_frame_blue{
+        width: 800px;
+        height: auto;
+    }
+
+    .photo-of-worker{
+        width: 250px;
+        position: absolute;
+        top: 72px;
+        left: 68px;
+    }
+    .worker-text-info{
+        position: absolute;
+        left: 330px;
+        top: 72px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .worker_frame_orange{
+        width: 600px;
+        height: auto;
+    }
+    .worker_frame_turquoise{
+        width: 600px;
+        height: auto;
+    }
+    .worker_frame_blue{
+        width: 600px;
+        height: auto;
+    }
+
+    .photo-of-worker{
+        width: 150px;
+        top: 72px;
+        left: 68px;
+    }
+    .worker-text-info{
+        left: 230px;
+        top: 72px;
+    }
+
+    .worker-info .project_name{
+        font-size: 20px;
+    }
+    .position{
+        font-size: 17px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .simple_text{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .worker_frame_orange{
+        transform: rotate(90deg);
+        margin-top: 140px;
+    }
+    .worker_frame_turquoise{
+        transform: rotate(90deg);
+        margin-top: 140px;
+    }
+    .worker_frame_blue{
+        transform: rotate(90deg);
+        margin-top: 140px;
+    }
+
+    .photo-of-worker{
+        width: 190px;
+        top: 50px;
+        left: 205px;
+    }
+    .worker-text-info{
+        left: 205px;
+        top: 280px;
+    }
+
+    .worker-info .project_name{
+        margin-left: 0px;
+    }
+    .position{
+        margin-left: 0px;
+    }
+    .simple_text{
+        margin-left: 0px;
+    }
+}
