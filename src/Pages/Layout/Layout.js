@@ -13,11 +13,6 @@ const Layout = () => {
           <p id="main">Main</p>
           <img src={line1} alt=""  id="img-nav-m"></img>
         </NavLink>
-
-        <NavLink to={'/services'} id="nav-link-block" className={({ isActive }) =>(isActive ? "active-tur" : "noactive")}>
-          <p>Services</p>
-          <img src={line6} alt=""  id="img-nav-s"></img>
-        </NavLink>
         
         <NavLink to={'/our-team'} id="nav-link-block" className={({ isActive }) =>(isActive ? "active-blue" : "noactive")}>
           <p>Our team</p>
