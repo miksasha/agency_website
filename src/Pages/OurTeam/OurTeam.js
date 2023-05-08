@@ -4,6 +4,7 @@ import background_ourteam_1 from "../../images/feedback-line1.png"
 import background_ourteam_2 from "../../images/main-background-line3.png"
 import InfoWingow from "./InfoWingow"
 import CircleCard from "./CircleCard"
+import Axios from "axios";
 
 import scroll from "../../images/ourteam/scroll.svg"
 
@@ -17,20 +18,32 @@ export default class OurTeam extends Component {
       big_info_window: {}, };
   }
 
+  
   componentDidMount() {
-    fetch('http://localhost:3000/workersInfo')
-    .then(response => response.json())
-    .then(data => {
-      this.setState({
-        arr: data,
-        worker_cards: this.choosen_card(data, 0),
-        big_info_window: data[0],
-      })
+    // fetch('http://localhost:3000/workersInfo')
+    // .then(response => response.json())
+    // .then(data => {
+    //   this.setState({
+    //     arr: data,
+    //     worker_cards: this.choosen_card(data, 0),
+    //     big_info_window: data[0],
+    //   })
       
-      console.log(data)
-      console.log('state => ', this.state.arr)
-    })
-    .catch(error => console.error(error))
+    //   console.log(data)
+    //   console.log('state => ', this.state.arr)
+    // })
+    // .catch(error => console.error(error))
+    console.log("here")
+      Axios.get("http://localhost:7777/").then(res => {
+
+        this.setState({
+              arr: res.data.data.workerCard,
+              worker_cards: this.choosen_card(res.data.data.workerCard, 0),
+              big_info_window: res.data.data.workerCard[0],
+            })
+      }).catch(error => {
+        console.error("Error fetching data: ", error);
+      });
   }
 
   choosen_card = (arr, id)=>{
@@ -39,10 +52,10 @@ export default class OurTeam extends Component {
     let result_array = new Array;
     for(let i = 0; i < arr.length; i++){
       if(i==id){
-        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color + "_choose"} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} position = {arr[i].position} />);
+        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color + "_choose"} photo_src = {"/imagejson/workers-photo/" + arr[i].photo_small_Name +".png"} class_photo = {arr[i].isChosen} position = {arr[i].position} />);
         continue;
       }
-        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color} photo_src = {arr[i].photo_small} class_photo = {arr[i].choose} position = {arr[i].position} />);
+        result_array.push(<CircleCard key={i} id={arr[i].id} borderClass={"border_" + arr[i].color} photo_src = {"/imagejson/workers-photo/" + arr[i].photo_small_Name + ".png"} class_photo = {arr[i].isChosen} position = {arr[i].position} />);
     }
     return result_array;
   }
@@ -73,10 +86,10 @@ export default class OurTeam extends Component {
 
         <InfoWingow 
         class={"worker_frame_"+this.state.big_info_window.color}  
-        photo_src = {this.state.big_info_window.photo_big} 
-        fullname = {this.state.big_info_window.fullname} 
+        photo_src = {"/imagejson/workers-photo/" + this.state.big_info_window.photo_big_Name + ".png"} 
+        fullname = {this.state.big_info_window.wName + " " + this.state.big_info_window.wSurname} 
         position = {this.state.big_info_window.position} 
-        text = {this.state.big_info_window.text}/>
+        text = {this.state.big_info_window.textComment}/>
         
           <div className='all-workers-with-scroll' onClick={event => this.scrollWorkers(event)}>
             <img src={scroll} alt="" className="worker-scroll-left"></img>
