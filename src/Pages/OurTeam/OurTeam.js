@@ -33,9 +33,7 @@ export default class OurTeam extends Component {
     //   console.log('state => ', this.state.arr)
     // })
     // .catch(error => console.error(error))
-    console.log("here")
       Axios.get("http://localhost:7777/").then(res => {
-
         this.setState({
               arr: res.data.data.workerCard,
               worker_cards: this.choosen_card(res.data.data.workerCard, 0),
